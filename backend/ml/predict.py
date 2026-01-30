@@ -70,7 +70,7 @@ class DropoutPredictor:
         self.is_loaded = False
 
         # Print paths for debugging
-        print(f"\n📁 Predict.py Configuration:")
+        print(f"\n Configuration:")
         print(f"   BASE_PATH: {self.config.BASE_PATH}")
         print(f"   SAVED_MODELS_PATH: {self.config.SAVED_MODELS_PATH}")
         print(f"   MODEL_PATH: {self.config.MODEL_PATH}")
@@ -81,11 +81,11 @@ class DropoutPredictor:
     def _load_artifacts(self):
         """Load all model artifacts from saved files"""
         try:
-            print("\n🔄 Loading model artifacts...")
+            print("\n Loading model artifacts...")
 
             # Check if saved_models directory exists
             if not os.path.exists(self.config.SAVED_MODELS_PATH):
-                print(f"❌ Error: saved_models directory not found at {self.config.SAVED_MODELS_PATH}")
+                print(f"Error: saved_models directory not found at {self.config.SAVED_MODELS_PATH}")
                 self.is_loaded = False
                 return
 
@@ -414,27 +414,27 @@ class DropoutPredictor:
         factor_info = {
             'academic_decline': {
                 'name': 'Academic Decline',
-                'icon': '📚',
+                'icon': '',
                 'description': 'Declining grades and poor academic performance'
             },
             'low_attendance': {
                 'name': 'Low Attendance',
-                'icon': '📅',
+                'icon': '',
                 'description': 'Irregular class attendance and LMS activity'
             },
             'financial_stress': {
                 'name': 'Financial Stress',
-                'icon': '💰',
+                'icon': '',
                 'description': 'Fee payment delays and financial difficulties'
             },
             'mental_health': {
                 'name': 'Mental Health Concern',
-                'icon': '🧠',
+                'icon': '',
                 'description': 'Counselor visits indicating stress or personal issues'
             },
             'low_engagement': {
                 'name': 'Low Engagement',
-                'icon': '📉',
+                'icon': '',
                 'description': 'Lack of participation in activities and resources'
             }
         }
@@ -648,21 +648,21 @@ class DropoutPredictor:
             return {
                 'level': 'HIGH',
                 'color': 'red',
-                'emoji': '🔴',
+                'emoji': '',
                 'description': 'Immediate intervention required'
             }
         elif risk_percentage >= self.config.MEDIUM_RISK_THRESHOLD:
             return {
                 'level': 'MEDIUM',
                 'color': 'orange',
-                'emoji': '🟡',
+                'emoji': '',
                 'description': 'Close monitoring recommended'
             }
         else:
             return {
                 'level': 'LOW',
                 'color': 'green',
-                'emoji': '🟢',
+                'emoji': '',
                 'description': 'Student appears to be on track'
             }
 
@@ -679,7 +679,7 @@ class DropoutPredictor:
                 {
                     'id': 1,
                     'priority': 'high',
-                    'icon': '📚',
+                    'icon': '',
                     'title': 'Assign Academic Mentor',
                     'description': 'Pair student with a peer mentor for academic support and study guidance.',
                     'action': 'assign_mentor'
@@ -687,7 +687,7 @@ class DropoutPredictor:
                 {
                     'id': 2,
                     'priority': 'medium',
-                    'icon': '📝',
+                    'icon': '',
                     'title': 'Academic Counseling Session',
                     'description': 'Schedule a session with academic advisor to discuss study strategies.',
                     'action': 'schedule_academic_counseling'
@@ -697,7 +697,7 @@ class DropoutPredictor:
                 {
                     'id': 3,
                     'priority': 'high',
-                    'icon': '📞',
+                    'icon': '',
                     'title': 'Contact Student',
                     'description': 'Reach out to understand reasons for low attendance.',
                     'action': 'contact_student'
@@ -705,7 +705,7 @@ class DropoutPredictor:
                 {
                     'id': 4,
                     'priority': 'medium',
-                    'icon': '👨‍👩‍👦',
+                    'icon': '',
                     'title': 'Parent Meeting',
                     'description': 'Schedule a meeting with parents to discuss attendance concerns.',
                     'action': 'schedule_parent_meeting'
@@ -715,7 +715,7 @@ class DropoutPredictor:
                 {
                     'id': 5,
                     'priority': 'high',
-                    'icon': '💰',
+                    'icon': '',
                     'title': 'Financial Aid Review',
                     'description': 'Connect with Financial Aid office for scholarship or fee waiver options.',
                     'action': 'financial_aid_review'
@@ -723,7 +723,7 @@ class DropoutPredictor:
                 {
                     'id': 6,
                     'priority': 'medium',
-                    'icon': '📋',
+                    'icon': '',
                     'title': 'Payment Plan',
                     'description': 'Discuss flexible payment plan options with accounts department.',
                     'action': 'setup_payment_plan'
@@ -733,7 +733,7 @@ class DropoutPredictor:
                 {
                     'id': 7,
                     'priority': 'high',
-                    'icon': '🧠',
+                    'icon': '',
                     'title': 'Counselor Referral',
                     'description': 'Refer to mental health counselor for follow-up session.',
                     'action': 'counselor_referral'
@@ -741,7 +741,7 @@ class DropoutPredictor:
                 {
                     'id': 8,
                     'priority': 'medium',
-                    'icon': '🤝',
+                    'icon': '',
                     'title': 'Peer Support Group',
                     'description': 'Connect with peer support group or student wellness program.',
                     'action': 'peer_support'
@@ -751,7 +751,7 @@ class DropoutPredictor:
                 {
                     'id': 9,
                     'priority': 'medium',
-                    'icon': '🎯',
+                    'icon': '',
                     'title': 'Activity Recommendation',
                     'description': 'Encourage participation in clubs or extracurricular activities.',
                     'action': 'recommend_activities'
@@ -759,7 +759,7 @@ class DropoutPredictor:
                 {
                     'id': 10,
                     'priority': 'low',
-                    'icon': '📖',
+                    'icon': '',
                     'title': 'Library Resources',
                     'description': 'Introduce student to library resources and study groups.',
                     'action': 'library_orientation'
@@ -777,7 +777,7 @@ class DropoutPredictor:
             recommendations.insert(0, {
                 'id': 0,
                 'priority': 'urgent',
-                'icon': '🚨',
+                'icon': '',
                 'title': 'Immediate Intervention Required',
                 'description': 'Schedule urgent meeting with student, advisor, and support team.',
                 'action': 'urgent_intervention'

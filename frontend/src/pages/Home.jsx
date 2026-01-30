@@ -51,7 +51,7 @@ const Home = () => {
   return (
     <div style={styles.container}>
       <div style={styles.header}>
-        <h1 style={styles.title}>🎓 Student Dropout Risk Prediction System</h1>
+        <h1 style={styles.title}>Student Dropout Risk Prediction System</h1>
         <p style={styles.subtitle}>Early intervention for better student outcomes</p>
       </div>
 
@@ -61,7 +61,7 @@ const Home = () => {
       
       {error && (
         <div style={styles.errorBox}>
-          <span style={styles.errorIcon}>⚠️</span>
+          <span style={styles.errorIcon}>!</span>
           <span>{error}</span>
         </div>
       )}

@@ -163,11 +163,11 @@ def get_risk_emoji(risk_level: str) -> str:
         Emoji string
     """
     emojis = {
-        'HIGH': '🔴',
-        'MEDIUM': '🟡',
-        'LOW': '🟢'
+        'HIGH': '',
+        'MEDIUM': '',
+        'LOW': ''
     }
-    return emojis.get(risk_level.upper(), '⚪')
+    return emojis.get(risk_level.upper(), '')
 
 
 def truncate_text(text: str, max_length: int = 100, suffix: str = '...') -> str:

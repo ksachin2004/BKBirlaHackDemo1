@@ -52,7 +52,7 @@ const OngoingDataCard = ({ data }) => {
       {/* Header */}
       <div className="card-header">
         <div className="header-content">
-          <div className="header-icon">📊</div>
+          <div className="header-icon"></div>
           <div className="header-text">
             <h2>Ongoing Performance Data</h2>
             <p>Real-time academic and engagement metrics</p>
@@ -68,7 +68,7 @@ const OngoingDataCard = ({ data }) => {
         {/* Academic Performance Section */}
         <div className="data-section">
           <div className="section-header">
-            <span className="section-icon">🎓</span>
+            <span className="section-icon"></span>
             <h3>Academic Performance</h3>
           </div>
           
@@ -76,7 +76,7 @@ const OngoingDataCard = ({ data }) => {
             {/* Attendance */}
             <div className="metric-card">
               <div className="metric-header">
-                <span className="metric-icon">📅</span>
+                <span className="metric-icon"></span>
                 <span className="metric-label">Attendance</span>
               </div>
               <div className="metric-body">
@@ -96,7 +96,7 @@ const OngoingDataCard = ({ data }) => {
             {/* CGPA */}
             <div className="metric-card">
               <div className="metric-header">
-                <span className="metric-icon">📈</span>
+                <span className="metric-icon"></span>
                 <span className="metric-label">Current CGPA</span>
               </div>
               <div className="metric-body">
@@ -123,7 +123,7 @@ const OngoingDataCard = ({ data }) => {
             {/* Assignments */}
             <div className="metric-card">
               <div className="metric-header">
-                <span className="metric-icon">📝</span>
+                <span className="metric-icon"></span>
                 <span className="metric-label">Assignments</span>
               </div>
               <div className="metric-body">
@@ -145,7 +145,7 @@ const OngoingDataCard = ({ data }) => {
         {/* Engagement Section */}
         <div className="data-section">
           <div className="section-header">
-            <span className="section-icon">💡</span>
+            <span className="section-icon"></span>
             <h3>Engagement & Activity</h3>
           </div>
           
@@ -153,7 +153,7 @@ const OngoingDataCard = ({ data }) => {
             {/* Library Visits */}
             <div className="engagement-item">
               <div className="engagement-icon-wrapper library">
-                <span>📚</span>
+                <span></span>
               </div>
               <div className="engagement-details">
                 <span className="engagement-label">Library Visits</span>
@@ -166,7 +166,7 @@ const OngoingDataCard = ({ data }) => {
             {/* LMS Login */}
             <div className="engagement-item">
               <div className={`engagement-icon-wrapper lms ${daysSinceLogin > 7 ? 'inactive' : ''}`}>
-                <span>💻</span>
+                <span></span>
               </div>
               <div className="engagement-details">
                 <span className="engagement-label">Last LMS Login</span>
@@ -179,7 +179,7 @@ const OngoingDataCard = ({ data }) => {
             {/* Extracurricular */}
             <div className="engagement-item">
               <div className={`engagement-icon-wrapper extra ${extracurricular.includes('No') ? 'inactive' : ''}`}>
-                <span>🏆</span>
+                <span></span>
               </div>
               <div className="engagement-details">
                 <span className="engagement-label">Extracurricular</span>
@@ -194,7 +194,7 @@ const OngoingDataCard = ({ data }) => {
         {/* Financial & Wellbeing Section */}
         <div className="data-section">
           <div className="section-header">
-            <span className="section-icon">🛡️</span>
+            <span className="section-icon"></span>
             <h3>Financial & Wellbeing</h3>
           </div>
           
@@ -202,7 +202,7 @@ const OngoingDataCard = ({ data }) => {
             {/* Fee Status */}
             <div className={`status-card ${feeStatus === 'Paid' ? 'status-good' : 'status-warning'}`}>
               <div className="status-icon">
-                {feeStatus === 'Paid' ? '✅' : '⚠️'}
+                {feeStatus === 'Paid' ? 'OK' : 'X'}
               </div>
               <div className="status-content">
                 <span className="status-label">Fee Payment Status</span>
@@ -216,7 +216,7 @@ const OngoingDataCard = ({ data }) => {
             {/* Counselor Visits */}
             <div className={`status-card ${counselorVisits && counselorVisits !== '0' ? 'status-attention' : 'status-neutral'}`}>
               <div className="status-icon">
-                {counselorVisits && counselorVisits !== '0' ? '🧠' : '😊'}
+                {counselorVisits && counselorVisits !== '0' ? 'ATTN' : 'OK'}
               </div>
               <div className="status-content">
                 <span className="status-label">Counselor Visits</span>

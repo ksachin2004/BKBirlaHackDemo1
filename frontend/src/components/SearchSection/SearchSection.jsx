@@ -22,7 +22,7 @@ const SearchSection = ({ onSearch }) => {
           className="search-input"
         />
         <button type="submit" className="search-button">
-          🔍 Analyze Student
+          Analyze Student
         </button>
       </form>
     </div>

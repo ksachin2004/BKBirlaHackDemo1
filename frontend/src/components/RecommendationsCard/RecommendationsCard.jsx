@@ -5,7 +5,7 @@ const RecommendationsCard = ({ recommendations }) => {
   return (
     <div className="recommendations-card">
       <div className="recommendations-header">
-        <h2>💡 RECOMMENDED INTERVENTIONS</h2>
+        <h2>RECOMMENDED INTERVENTIONS</h2>
       </div>
       <div className="recommendations-content">
         {recommendations && recommendations.map((rec, index) => (

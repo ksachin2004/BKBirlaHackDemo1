@@ -9,15 +9,15 @@ const RiskAlertCard = ({ data, studentData }) => {
   };
 
   const getRiskEmoji = (level) => {
-    if (level === 'HIGH') return '🔴';
-    if (level === 'MEDIUM') return '🟡';
-    return '🟢';
+    if (level === 'HIGH') return '';
+    if (level === 'MEDIUM') return '';
+    return '';
   };
 
   return (
     <div className="risk-alert-card">
       <div className="alert-header">
-        <h2>🚨 STUDENT DROPOUT RISK ALERT</h2>
+        <h2>STUDENT DROPOUT RISK ALERT</h2>
       </div>
       <div className="alert-content">
         <div className="student-info">
