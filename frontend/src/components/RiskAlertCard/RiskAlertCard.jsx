@@ -28,13 +28,13 @@ const RiskAlertCard = ({ data, studentData }) => {
         <div 
           className="risk-level-box"
           style={{ 
-            borderColor: getRiskColor(data.riskLevel),
-            background: `${getRiskColor(data.riskLevel)}15`
+            borderColor: getRiskColor(data.risk_level || data.riskLevel),
+            background: `${getRiskColor(data.risk_level || data.riskLevel)}15`
           }}
         >
           <div className="risk-label">RISK LEVEL</div>
-          <div className="risk-value" style={{ color: getRiskColor(data.riskLevel) }}>
-            {getRiskEmoji(data.riskLevel)} {data.riskLevel} ({data.riskPercentage}%)
+          <div className="risk-value" style={{ color: getRiskColor(data.risk_level || data.riskLevel) }}>
+            {getRiskEmoji(data.risk_level || data.riskLevel)} {data.risk_level || data.riskLevel} ({data.risk_percentage || data.riskPercentage}%)
           </div>
         </div>
       </div>

@@ -2,6 +2,20 @@ import React from 'react';
 import './RiskFactorsCard.css';
 
 const RiskFactorsCard = ({ factors }) => {
+  // Safety check for undefined factors
+  if (!factors || !Array.isArray(factors)) {
+    return (
+      <div className="risk-factors-card">
+        <div className="factors-header">
+          <h2>📊 Risk Factors Identified</h2>
+        </div>
+        <div className="factors-content">
+          <p>No risk factors data available.</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="risk-factors-card">
       <div className="factors-header">

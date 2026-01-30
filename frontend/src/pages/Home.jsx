@@ -79,7 +79,7 @@ const Home = () => {
       {predictionData && (
         <div style={styles.predictionSection}>
           <RiskAlertCard data={predictionData} studentData={studentData} />
-          <RiskFactorsCard factors={predictionData.riskFactors} />
+          <RiskFactorsCard factors={predictionData.risk_factors} />
           <RecommendationsCard recommendations={predictionData.recommendations} />
         </div>
       )}

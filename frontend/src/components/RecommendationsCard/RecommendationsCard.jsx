@@ -8,10 +8,13 @@ const RecommendationsCard = ({ recommendations }) => {
         <h2>💡 RECOMMENDED INTERVENTIONS</h2>
       </div>
       <div className="recommendations-content">
-        {recommendations.map((rec, index) => (
+        {recommendations && recommendations.map((rec, index) => (
           <div key={index} className="recommendation-item">
             <div className="recommendation-icon">{rec.icon}</div>
-            <div className="recommendation-text">{rec.text}</div>
+            <div className="recommendation-text">
+              <h4>{rec.title}</h4>
+              <p>{rec.description || rec.text}</p>
+            </div>
           </div>
         ))}
         <div className="action-buttons">
