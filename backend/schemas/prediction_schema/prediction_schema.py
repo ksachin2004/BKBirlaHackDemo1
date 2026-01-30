@@ -48,7 +48,7 @@ class PredictionSchema:
         return [
             {
                 'name': factor.get('name', 'Unknown'),
-                'icon': factor.get('icon', '📊'),
+                'icon': factor.get('icon', ''),
                 'contribution': factor.get('contribution', 0),
                 'description': factor.get('description', '')
             }
@@ -62,7 +62,7 @@ class PredictionSchema:
             {
                 'id': rec.get('id', 0),
                 'priority': rec.get('priority', 'medium'),
-                'icon': rec.get('icon', '💡'),
+                'icon': rec.get('icon', ''),
                 'title': rec.get('title', 'Recommendation'),
                 'description': rec.get('description', ''),
                 'action': rec.get('action', '')

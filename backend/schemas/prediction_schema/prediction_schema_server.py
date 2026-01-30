@@ -171,11 +171,11 @@ class PredictionSchemaServer:
     def _get_risk_emoji(risk_level: str) -> str:
         """Get emoji for risk level"""
         emojis = {
-            'HIGH': '🔴',
-            'MEDIUM': '🟡',
-            'LOW': '🟢'
+            'HIGH': '',
+            'MEDIUM': '',
+            'LOW': ''
         }
-        return emojis.get(risk_level, '⚪')
+        return emojis.get(risk_level, '')
     
     @staticmethod
     def aggregate_batch_predictions(predictions: List[Dict[str, Any]]) -> Dict[str, Any]:

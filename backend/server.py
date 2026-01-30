@@ -37,17 +37,17 @@ CORS(app, origins=CORS_ORIGINS)
 # ============================================================================
 
 print("\n" + "="*60)
-print("🚀 Starting Student Dropout Prediction System")
+print("Starting Student Dropout Prediction System")
 print("="*60)
 
 # Check if ML model is loaded
 model_status = prediction_service_server.get_service_status()
 
 if model_status.get('model_loaded'):
-    print("\n✅ ML Model loaded successfully!")
+    print("\n ML Model loaded successfully!")
     print("   System ready to make predictions.")
 else:
-    print("\n⚠️  WARNING: ML Model not loaded!")
+    print("\n WARNING: ML Model not loaded!")
     print("   The system will run but predictions may not work correctly.")
     print("   Please ensure model files exist in backend/ml/saved_models/")
 
@@ -237,7 +237,7 @@ def bad_request(error):
 
 if __name__ == '__main__':
     print("="*60)
-    print("🌐 Server starting on http://localhost:8000")
+    print("Server starting on http://localhost:8000")
     print("="*60)
     print("\nAvailable endpoints:")
     print("  GET  /api/health              - Health check")
