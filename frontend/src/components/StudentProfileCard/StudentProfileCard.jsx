@@ -5,7 +5,7 @@ const StudentProfileCard = ({ data }) => {
   return (
     <div className="profile-card">
       <div className="card-header">
-        <h2>👤 Student Profile</h2>
+        <h2>Student Profile</h2>
       </div>
       <div className="card-content">
         <div className="info-row">

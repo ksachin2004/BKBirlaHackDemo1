@@ -7,7 +7,7 @@ const RiskFactorsCard = ({ factors }) => {
     return (
       <div className="risk-factors-card">
         <div className="factors-header">
-          <h2>📊 Risk Factors Identified</h2>
+          <h2>Risk Factors Identified</h2>
         </div>
         <div className="factors-content">
           <p>No risk factors data available.</p>
@@ -19,7 +19,7 @@ const RiskFactorsCard = ({ factors }) => {
   return (
     <div className="risk-factors-card">
       <div className="factors-header">
-        <h2>📊 Risk Factors Identified</h2>
+        <h2>Risk Factors Identified</h2>
       </div>
       <div className="factors-content">
         {factors.map((factor, index) => (
